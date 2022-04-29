@@ -1,14 +1,10 @@
 version: 0.2
 
 phases:
-  install:
-    runtime-versions:
-      nodejs: 16
-   
+  pre_build:
     commands:
-        # install npm
-        - npm install
-       
+        # run build script
+        - npm install     
   build:
     commands:
         # run build script
@@ -20,4 +16,4 @@ artifacts:
   files:
     - /**/*
   discard-path: no,
-  base-directory: build
+  base-directory: dist
